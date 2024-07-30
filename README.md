@@ -1,1 +1,1 @@
-# Spark_on_YARN
+# 2024_summer_seminar
