@@ -38,10 +38,10 @@ if __name__ == "__main__":
 
     # 캘리포니아(CA) 데이터 집계
     # ca_count_mnm_df = (mnm_df.select("*")
-    #                    .where(mnm_df.State == 'CA')
-    #                    .groupBy("State", "Color")
-    #                    .sum("Count")
-    #                    .orderBy("sum(Count)", ascending=False))
+    #                    .(mnm_df.State == 'CA')
+    #                    .("State", "Color")
+    #                    .("Count")
+    #                    .("sum(Count)", ascending=False))
 
     
     # ca_count_mnm_df.show(n=10, truncate=False)
