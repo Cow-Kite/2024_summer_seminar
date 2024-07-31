@@ -27,22 +27,22 @@ if __name__ == "__main__":
     # State, Color, Count 열을 선택하여 새로운 df 생성
     # groupBy를 사용하여 State, Color 별로 데이터를 그룹화하고, Count 합산 sum
     # orderBy를 사용하여 Count값을 기준으로 내림차순 정렬
-    count_mnm_df = (mnm_df.select("State", "Color", "Count")
-                    .groupBy("State", "Color")
-                    .sum("Count")
-                    .orderBy("sum(Count)", ascending=False))
+    # count_mnm_df = (mnm_df.select("State", "Color", "Count")
+    #                 .groupBy("State", "Color")
+    #                 .sum("Count")
+    #                 .orderBy("sum(Count)", ascending=False))
 
     # 처음 60행 출력
-    count_mnm_df.show(n=60, truncate=False)
-    print("Total Rows = %d" % (count_mnm_df.count()))
+    # count_mnm_df.show(n=60, truncate=False)
+    # print("Total Rows = %d" % (count_mnm_df.count()))
 
     # 캘리포니아(CA) 데이터 집계
-    ca_count_mnm_df = (mnm_df.select("*")
-                       .where(mnm_df.State == 'CA')
-                       .groupBy("State", "Color")
-                       .sum("Count")
-                       .orderBy("sum(Count)", ascending=False))
+    # ca_count_mnm_df = (mnm_df.select("*")
+    #                    .where(mnm_df.State == 'CA')
+    #                    .groupBy("State", "Color")
+    #                    .sum("Count")
+    #                    .orderBy("sum(Count)", ascending=False))
 
     
-    ca_count_mnm_df.show(n=10, truncate=False)
+    # ca_count_mnm_df.show(n=10, truncate=False)
 
